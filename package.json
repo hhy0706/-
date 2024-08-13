@@ -1,0 +1,31 @@
+{
+  "name": "com-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "gen": "node ./script/genNewComp/index.js",
+    "build:lib": "vue-tsc --noEmit && vite build --config build/lib.config.ts",
+    "build:doc": "vue-tsc --noEmit && vite build --config build/doc.config.ts && node script/copyDir.js"
+  },
+  "dependencies": {
+    "vite-plugin-md": "^0.21.5",
+    "vue": "^3.4.35",
+    "vue-router": "^4.4.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.8",
+    "inquirer": "^8.2.0",
+    "less": "^4.2.0",
+    "prismjs": "^1.29.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.0",
+    "vite-plugin-dts": "^4.0.2",
+    "vue-tsc": "^2.0.29"
+  }
+}
